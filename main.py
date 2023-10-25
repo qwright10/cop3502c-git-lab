@@ -1,9 +1,5 @@
-def decode(encoded_password):
-    raise NotImplementedError
-
-def encode(password):
-    return "".join([str((int(x) + 3) % 10) for x in password])
-
+from decode import decode
+from encode import encode
 
 def main():
     encoded_password = None
