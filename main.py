@@ -1,3 +1,6 @@
+def decode(encoded_password):
+    raise NotImplementedError
+
 def encode(password):
     return "".join([str((int(x) + 3) % 10) for x in password])
 
@@ -21,7 +24,9 @@ Please enter an option: """))
             print(f"Your password has been encoded and stored!\n")
 
         if selection == 2:
-            pass
+            decoded_password = decode(encoded_password)
+            print(f"The encoded password is {encoded_password}, and the original password is {decoded_password}.\n")
+
         if selection == 3:
             exit()
 
